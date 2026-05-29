@@ -361,6 +361,8 @@ master
 │   └── feature
 ```
 
+<img width="1888" height="682" alt="image" src="https://github.com/user-attachments/assets/86f0ba85-bfba-4ed5-87d8-bea7f608b24c" />
+
 ### Branch Overview
 
 | Branch | Purpose | Merges Into |
