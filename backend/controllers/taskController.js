@@ -114,5 +114,4 @@ const deleteTask = async (req, res) => {
     res.status(500).json({ message: 'Server error' });
   }
 };
-
 module.exports = { getTasks, createTask, updateTask, deleteTask };
