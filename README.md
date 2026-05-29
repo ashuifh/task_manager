@@ -63,6 +63,26 @@ project/
 ```
 
 ---
+## 🌿 Git Branch Strategy
+
+This project follows a **3-branch workflow** for clean and organized development.
+
+```
+master
+│
+├── dev
+│   └── feature
+```
+
+<img width="1888" height="682" alt="image" src="https://github.com/user-attachments/assets/86f0ba85-bfba-4ed5-87d8-bea7f608b24c" />
+
+### Branch Overview
+
+| Branch | Purpose | Merges Into |
+|---|---|---|
+| `master` | Production-ready stable code | — |
+| `dev` | Integration branch for testing | `master` |
+| `feature` | Active development of new features | `dev` |
 
 ## ⚙️ Setup & Installation
 
@@ -284,28 +304,6 @@ All task routes require `Authorization: Bearer <token>` header.
 
 ---
 
-## 🧪 Testing the API (with curl)
-
-```bash
-# Register
-curl -X POST http://localhost:5000/api/users/register \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Ayush","email":"ayush@test.com","password":"123456"}'
-
-# Login
-curl -X POST http://localhost:5000/api/users/login \
-  -H "Content-Type: application/json" \
-  -d '{"email":"ayush@test.com","password":"123456"}'
-
-# Get Tasks (replace TOKEN)
-curl http://localhost:5000/api/tasks \
-  -H "Authorization: Bearer TOKEN"
-
-# Create Task
-curl -X POST http://localhost:5000/api/tasks \
-  -H "Authorization: Bearer TOKEN" \
-  -H "Content-Type: application/json" \
-  -d '{"title":"My first task","priority":"high","status":"pending"}'
 ```
 
 ---
@@ -350,31 +348,9 @@ This project is for educational/internship purposes.
 
 ---
 
-## 🌿 Git Branch Strategy
 
-This project follows a **3-branch workflow** for clean and organized development.
-
-```
-master
-│
-├── dev
-│   └── feature
-```
-
-<img width="1888" height="682" alt="image" src="https://github.com/user-attachments/assets/86f0ba85-bfba-4ed5-87d8-bea7f608b24c" />
-
-### Branch Overview
-
-| Branch | Purpose | Merges Into |
-|---|---|---|
-| `master` | Production-ready stable code | — |
-| `dev` | Integration branch for testing | `master` |
-| `feature` | Active development of new features | `dev` |
 
 ---
-
-### Branch Details
-
 #### `master` — Production Branch
 - Always stable and deployable
 - No direct commits — only merged from `dev`
